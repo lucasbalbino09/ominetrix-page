@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "@fontsource/mulish"; 
+@import "@fontsource/mulish/400.css";
+@import "@fontsource/mulish/400-italic.css";
 
 :root {
   --background: #ffffff;
@@ -17,7 +20,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Mulish", system-ui;
 }
 
 @layer utilities {
