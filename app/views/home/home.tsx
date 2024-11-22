@@ -8,10 +8,8 @@ import Typography from "@mui/material/Typography";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Tooltip from '@mui/material/Tooltip';
 import MenuIcon from "@mui/icons-material/Menu";
 import MailIcon from "@mui/icons-material/Mail";
-import Divider from "@mui/material/Divider";
 import {
   ListItem,
   ListItemButton,
