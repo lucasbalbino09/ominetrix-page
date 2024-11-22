@@ -9,7 +9,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import axios from 'axios';
-import "../tabela/tabela.css";
+import "../pages/tabela.css";
 
 // Definindo a interface CorrespondencePackage para refletir o seu modelo da API
 interface CorrespondencePackage {

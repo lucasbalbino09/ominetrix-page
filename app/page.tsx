@@ -1,5 +1,5 @@
-import Teste from "./views/home/home";
-import Tabela from "./views/tabela/tabela";
+import Teste from "../pages/home";
+import Tabela from "../pages/tabela";
 export default function Home() {
   return (
     <>
