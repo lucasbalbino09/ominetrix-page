@@ -1,22 +1,64 @@
-.input-text {
-    margin: 10px;
-    background-color: #f5f5f5;
-    border-radius: 8px;        /* Bordas arredondadas */
-  }
-  
-  .input-text .MuiOutlinedInput-root {
-    font-size: 16px; /* Tamanho do texto */
-  }
-  
-  .input-text .MuiInputLabel-root {
-    color: gray; /* Cor do rótulo */
-  }
-  
-  .input-text .MuiOutlinedInput-notchedOutline {
-    border-color: #1976d2; /* Cor da borda */
-  }
-  
-  .input-text:hover .MuiOutlinedInput-notchedOutline {
-    border-color: #42a5f5; /* Cor da borda ao passar o mouse */
-  }
-  
+.titulo-formulario, .sub-titulo-formulario {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+/* Estilos gerais para o formulário */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para os rótulos */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilos para os inputs e textarea */
+form input, 
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Estilo específico para textarea */
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Estilos para o botão */
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para alinhar os campos e botões */
+form div {
+  margin-bottom: 15px;
+}

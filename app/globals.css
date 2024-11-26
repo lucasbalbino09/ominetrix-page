@@ -18,8 +18,7 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: black;  
   font-family: "Mulish", system-ui;
 }
 
