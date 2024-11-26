@@ -3,6 +3,11 @@
   justify-content: center;
   font-family: Arial, sans-serif;
 }
+
+.titulo-formulario {
+  margin-top: 90px ;
+}
+
 /* Estilos gerais para o formulário */
 form {
   max-width: 500px;
@@ -14,7 +19,12 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
 }
-
+.adicionar-foto {
+  display: flex;
+}
+.btn-adicionar-foto, .input-adicionar-foto {
+  height: 45px;
+}
 /* Estilos para os rótulos */
 form label {
   display: block;

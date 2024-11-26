@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "@/pages/navbar";
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import { styled } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import "./cadastro.css";
 
 const Cadastro = () => {
@@ -15,15 +15,15 @@ const Cadastro = () => {
   const [signaturePath, setSignaturePath] = useState("");
   const [imagemUrl, setImagemUrl] = useState("");
 
-  const VisuallyHiddenInput = styled('input')({
-    clip: 'rect(0 0 0 0)',
-    clipPath: 'inset(50%)',
+  const VisuallyHiddenInput = styled("input")({
+    clip: "rect(0 0 0 0)",
+    clipPath: "inset(50%)",
     height: 1,
-    overflow: 'hidden',
-    position: 'absolute',
+    overflow: "hidden",
+    position: "absolute",
     bottom: 0,
     left: 0,
-    whiteSpace: 'nowrap',
+    whiteSpace: "nowrap",
     width: 1,
   });
 
@@ -108,21 +108,24 @@ const Cadastro = () => {
           />
         </div>
 
-        <div>
+        <div className="adicionar-foto">
           <Button
             component="label"
-            role={undefined}
+            className="btn-adicionar-foto"
             variant="contained"
-            tabIndex={-1}
             startIcon={<CloudUploadIcon />}
           >
-            Upload files
+            Adicionar Foto
             <VisuallyHiddenInput
               type="file"
-              onChange={(event) => console.log(event.target.files)}
-              multiple
+              onChange={(e) => {
+                if (e.target.files && e.target.files[0]) {
+                  setImagemUrl(e.target.files[0].name); // Captura o nome do arquivo
+                }
+              }}
             />
           </Button>
+          <span className="input-adicionar-foto">{imagemUrl}</span>
         </div>
 
         <button type="submit">Enviar</button>
