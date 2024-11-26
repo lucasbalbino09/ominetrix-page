@@ -2,6 +2,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
+import FormGroup from "@mui/material/FormGroup";
 import Navbar from "./navbar";
 import "../app/Globals.css";
 import "./cadastro.css";
@@ -17,8 +18,14 @@ export default function Cadastro() {
         Preencha o formulario para cadastrar uma nova encomenda.
       </Typography>
 
-      <TextField id="outlined-basic" className="input-text"  label="Nome" variant="outlined" />
-      
+      <FormGroup>
+        <TextField
+          id="outlined-basic"
+          className="input-text"
+          label="Nome"
+          variant="outlined"
+        />
+      </FormGroup>
     </>
   );
 }
