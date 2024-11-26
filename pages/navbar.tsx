@@ -13,6 +13,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import BackupTableIcon from "@mui/icons-material/BackupTable";
 import "./Navbar.css";
+import Logo from "../app/public/DALL·E.webp"
+import { CardMedia } from "@mui/material";
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -58,7 +60,7 @@ export default function Navbar() {
                     <AssignmentIcon></AssignmentIcon> &nbsp; Cadastro
                   </MenuItem>
                 </Link>
-                <Link href="/cadastro" legacyBehavior>
+                <Link href="/tabela" legacyBehavior>
                   <MenuItem onClick={handleClose}>
                     <BackupTableIcon></BackupTableIcon> &nbsp; Tabela
                   </MenuItem>
@@ -75,6 +77,13 @@ export default function Navbar() {
             >
               Ominetrix
             </Typography>
+            <CardMedia
+             component="img"
+             sx={{ width: 100, height: 100, borderRadius: 50 }}
+             image={Logo.src}
+            >              
+            </CardMedia>
+
           </Toolbar>
         </AppBar>
       </Box>

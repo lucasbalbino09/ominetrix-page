@@ -1,13 +1,13 @@
 "use client"
 import Navbar from "@/pages/navbar";
-import Tabela from "@/pages/tabela";
+import Dashboard from "@/pages/dashboard";
 import "./globals.css";
 
 export default function Home() {
   return (
     <>
-      <Navbar></Navbar>        
-      <Tabela></Tabela>
+      <Navbar></Navbar>  
+      <Dashboard></Dashboard>
     </>   
   );
 }

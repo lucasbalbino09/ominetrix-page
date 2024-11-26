@@ -1,14 +1,15 @@
-'use client'; // Indica que o componente deve ser renderizado no cliente
+"use client"; // Indica que o componente deve ser renderizado no cliente
 
 import React, { useEffect, useState } from "react";
 import Table from "@mui/material/Table";
+import Navbar from "@/pages/navbar";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import axios from 'axios';
+import axios from "axios";
 import "../pages/tabela.css";
 
 // Definindo a interface CorrespondencePackage para refletir o seu modelo da API
@@ -38,17 +39,19 @@ export default function Tabela() {
 
   // Função para buscar pacotes da API
   useEffect(() => {
-    axios.get('http://localhost:8080/api/packages')
-      .then(response => {
+    axios
+      .get("http://localhost:8080/api/packages")
+      .then((response) => {
         setPackages(response.data); // Armazena os pacotes no estado
       })
-      .catch(error => {
-        console.error('Erro ao buscar pacotes:', error);
+      .catch((error) => {
+        console.error("Erro ao buscar pacotes:", error);
       });
   }, []);
 
   return (
     <>
+      <Navbar></Navbar>
       <h1 className="titulo">Tabela de Correspondências</h1>
       <div>
         <TableContainer component={Paper}>
@@ -70,8 +73,13 @@ export default function Tabela() {
                   key={pkg.id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">{pkg.id}</TableCell>
-                  <TableCell>{pkg.morador.nome} - {pkg.morador.unidade} / {pkg.morador.bloco}</TableCell>
+                  <TableCell component="th" scope="row">
+                    {pkg.id}
+                  </TableCell>
+                  <TableCell>
+                    {pkg.morador.nome} - {pkg.morador.unidade} /{" "}
+                    {pkg.morador.bloco}
+                  </TableCell>
                   <TableCell>{pkg.funcionario.nome}</TableCell>
                   <TableCell>{pkg.correspondencia.tipo}</TableCell>
                   <TableCell>{pkg.correspondencia.descricao}</TableCell>
