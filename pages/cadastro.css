@@ -1,0 +1,22 @@
+.input-text {
+    margin: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;        /* Bordas arredondadas */
+  }
+  
+  .input-text .MuiOutlinedInput-root {
+    font-size: 16px; /* Tamanho do texto */
+  }
+  
+  .input-text .MuiInputLabel-root {
+    color: gray; /* Cor do rótulo */
+  }
+  
+  .input-text .MuiOutlinedInput-notchedOutline {
+    border-color: #1976d2; /* Cor da borda */
+  }
+  
+  .input-text:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #42a5f5; /* Cor da borda ao passar o mouse */
+  }
+  
