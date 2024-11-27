@@ -124,23 +124,7 @@ const Cadastro = () => {
         </div>
 
         <div className="adicionar-foto">
-          <Button
-            component="label"
-            className="btn-adicionar-foto"
-            variant="contained"
-            startIcon={<CloudUploadIcon />}
-          >
-            Adicionar Foto
-            <VisuallyHiddenInput
-              type="file"
-              onChange={(e) => {
-                if (e.target.files && e.target.files[0]) {
-                  setFile(e.target.files[0]); // Armazena o arquivo para upload
-                }
-              }}
-            />
-          </Button>
-          <span className="input-adicionar-foto">{file ? file.name : ""}</span>
+          <input type="link" />
         </div>
 
         <button type="submit">Enviar</button>

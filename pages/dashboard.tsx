@@ -1,7 +1,9 @@
 import React from "react";
-import Entrega from "../app/public/entrega.jpeg"
-import Envio from "../app/public/enviar-encomendas.jpg"
-import black from "../app/public/noknoxblackfriday.jpg"
+import Entrega from "../app/public/entrega.jpeg";
+import Envio from "../app/public/enviar-encomendas.jpg";
+import black from "../app/public/noknoxblackfriday.jpg";
+import caixas from "../app/public/caixas.webp";
+
 import {
   Box,
   Grid,
@@ -111,7 +113,7 @@ const Dashboard = () => {
                           <CardMedia
                             component="img"
                             height="150"
-                            image="https://via.placeholder.com/300x150?text=Imagem+Categoria"
+                            image = {caixas.src}
                             alt={categoria}
                           />
                         </Card>

@@ -15,15 +15,6 @@ import "../pages/tabela.css";
 // Definindo a interface CorrespondencePackage para refletir o seu modelo da API
 interface CorrespondencePackage {
   id: string;
-  morador: {
-    nome: string;
-    unidade: string;
-    bloco: string;
-  };
-  funcionario: {
-    nome: string;
-    matricula: string;
-  };
   correspondencia: {
     tipo: string;
     descricao: string;
@@ -59,9 +50,7 @@ export default function Tabela() {
             <TableHead>
               <TableRow>
                 <TableCell>ID</TableCell>
-                <TableCell>Morador</TableCell>
-                <TableCell>Funcionario</TableCell>
-                <TableCell>Tipo de Correspondência</TableCell>
+                <TableCell>Tipo</TableCell>
                 <TableCell>Descrição</TableCell>
                 <TableCell>Status</TableCell>
                 <TableCell>Data de Chegada</TableCell>
@@ -76,11 +65,6 @@ export default function Tabela() {
                   <TableCell component="th" scope="row">
                     {pkg.id}
                   </TableCell>
-                  <TableCell>
-                    {pkg.morador.nome} - {pkg.morador.unidade} /{" "}
-                    {pkg.morador.bloco}
-                  </TableCell>
-                  <TableCell>{pkg.funcionario.nome}</TableCell>
                   <TableCell>{pkg.correspondencia.tipo}</TableCell>
                   <TableCell>{pkg.correspondencia.descricao}</TableCell>
                   <TableCell>{pkg.correspondencia.status}</TableCell>
