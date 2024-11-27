@@ -62,7 +62,7 @@ export default function Navbar() {
                 </Link>
                 <Link href="/tabela" legacyBehavior>
                   <MenuItem onClick={handleClose}>
-                    <BackupTableIcon></BackupTableIcon> &nbsp; Tabela
+                    <BackupTableIcon></BackupTableIcon> &nbsp; Correspondências
                   </MenuItem>
                 </Link>
               </Menu>

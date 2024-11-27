@@ -52,7 +52,7 @@ export default function Tabela() {
   return (
     <>
       <Navbar></Navbar>
-      <h1 className="titulo">Tabela de Correspondências</h1>
+      <h1 className="titulo">Correspondências</h1>
       <div>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
